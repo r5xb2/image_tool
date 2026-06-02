@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Filters - 圖片濾鏡</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <h1>📸 Image Filters</h1>
+    <p>上傳圖片，套用濾鏡特效</p>
+  </header>
+
+  <div class="main-layout">
+    <div class="preview-area">
+      <div class="canvas-wrapper" id="dropZone">
+        <canvas id="preview"></canvas>
+        <div class="upload-placeholder">
+          <div class="placeholder-icon">🖼️</div>
+          <p>拖曳圖片到這裡，或點擊下方按鈕上傳</p>
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="btn btn-primary" id="uploadBtn">📤 上傳圖片</button>
+        <button class="btn btn-secondary" id="resetBtn">↺ 還原</button>
+        <button class="btn btn-accent" id="downloadBtn">⬇ 下載</button>
+      </div>
+      <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+
+    <div class="controls-area">
+      <div class="tabs" id="categoryTabs"></div>
+      <div class="filter-grid" id="filterGrid"></div>
+      <div class="param-panel" id="paramPanel"></div>
+    </div>
+  </div>
+</div>
+<script src="filters/core.js"></script>
+<script src="filters/bw.js"></script>
+<script src="filters/film.js"></script>
+<script src="filters/artistic.js"></script>
+<script src="filters/color.js"></script>
+<script src="filters/lut.js"></script>
+<script src="luts-embedded.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
