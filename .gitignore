@@ -1,0 +1,6 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts (regenerate via: node tools/embed-luts.js)
+# luts-embedded.js is tracked to support file:// usage
